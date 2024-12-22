@@ -200,7 +200,6 @@ export default {
         }
     },
 
-    // examples
     examples: [
         [
             {
