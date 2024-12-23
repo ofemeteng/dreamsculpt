@@ -38,14 +38,15 @@ cd dreamsculpt
 
 2. Install dependencies:
 ```bash
-pnpm install
+pnpm install  && pnpm build
 ```
 
 3. Configure environment variables:
-Create a `.env` file in the root directory and add:
+
+Create a `.env` file in the root directory from a copy of `.env.example`  and fill in the following:
 ```env
 # LLM Provider Credentials
-# Add your model provider credentials here
+# Fill your model provider credentials here
 
 # Meshy
 MESHY_API_KEY=your_meshy_api_key
@@ -70,6 +71,10 @@ pnpm start --character="characters/dreamsculpt.character.json"
 ```bash
 pnpm start:client
 ```
+
+3. The Twitter integration runs immediately you start the main agent.
+
+You can access the agent either through the chat interface at `http://localhost:5173` or through the agent Twitter handle `@DreamSculpt3D`
 
 ## 💡 Example Usage
 
@@ -100,7 +105,7 @@ Action ID: [action_id]
 
 - **Framework**: Eliza Agent Framework
 - **3D Generation**: Meshy.ai API
-- **Blockchain**: Solana (Testnet)
+- **Blockchain**: Solana (Crossmint Staging Environment)
 - **NFT Infrastructure**: Crossmint API
 - **Social Integration**: Twitter API
 - **Client Interface**: React.js
