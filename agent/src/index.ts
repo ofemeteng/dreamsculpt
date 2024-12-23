@@ -60,7 +60,7 @@ import { fileURLToPath } from "url";
 import yargs from "yargs";
 
 import create3DAsset from "./actions/create3DAsset.ts";
-import mintnft from "./actions/mintNft.ts";
+import mintNft from "./actions/mintNft.ts";
 
 const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
 const __dirname = path.dirname(__filename); // get the name of the directory
@@ -554,7 +554,7 @@ export async function createAgent(
             getSecret(character, "STORY_PRIVATE_KEY") ? storyPlugin : null,
         ].filter(Boolean),
         providers: [],
-        actions: [mintnft, create3DAsset],
+        actions: [mintNft, create3DAsset],
         services: [],
         managers: [],
         cacheManager: cache,
